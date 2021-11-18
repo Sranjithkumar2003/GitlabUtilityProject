@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	tools {
 	
-        jdk 'jdk_1.8.0_151'
+        jdk "jdk-1.8.101"
     }
 	stages {
 	
@@ -15,6 +15,7 @@ pipeline {
 		stage ('Build') {
 			steps {
 			    echo 'Running Build Pipeline'
+			    sh 'java -version'
 			    /* sh './mvnw -Dmaven.test.failure.ignore=true clean package' */
 			    echo 'Completing Build Pipeline'
 			}  
