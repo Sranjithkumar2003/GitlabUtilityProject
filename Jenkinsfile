@@ -1,10 +1,15 @@
 pipeline {
 	agent any
+	tools {
+	
+        maven "MAVEN"
+        jdk "JDK"
+    }
 	stages {
 	
 		stage ('One') {
 			steps {
-				echo 'Hi, this is Ranjith'
+				echo 'Hi, Test Pipiline'
 			}
 		}
 		
