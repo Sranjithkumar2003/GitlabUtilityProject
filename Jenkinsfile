@@ -13,6 +13,7 @@ pipeline {
 			    echo 'Running Build Pipeline'
 			    sh 'java -version'
 			    /* sh './mvnw -Dmaven.test.failure.ignore=true clean package' */
+			    sh 'mvn -B -DskipTests clean package'
 			    echo 'Completing Build Pipeline'
 			}  
 		}
