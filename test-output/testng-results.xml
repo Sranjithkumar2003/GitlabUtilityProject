@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="16" passed="15" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-18T15:42:28 EST" name="Suite" finished-at="2021-11-18T15:42:29 EST" duration-ms="1306">
+    <groups>
+    </groups>
+    <test started-at="2021-11-18T15:42:28 EST" name="Test" finished-at="2021-11-18T15:42:29 EST" duration-ms="1306">
+      <class name="ValidateGitlabUtility">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:28 EST" name="beforeTest" finished-at="2021-11-18T15:42:29 EST" duration-ms="1125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="testGetProjectID()[pri:0, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testGetProjectID" finished-at="2021-11-18T15:42:29 EST" duration-ms="55" status="FAIL">
+          <exception class="org.codehaus.groovy.runtime.InvokerInvocationException">
+            <message>
+              <![CDATA[groovy.lang.MissingMethodException: No signature of method: vars.GitlabUtility.sh() is applicable for argument types: (LinkedHashMap) values: [[script:source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 && gitlab projects "{ per_page: '200' }" --only=name,id,http_url_to_repo | grep -i "Test Project" | sort | awk -F '|' '{ print $3 }' | xargs, ...]]
+Possible solutions: is(java.lang.Object), use([Ljava.lang.Object;), run(), run(), any(), with(groovy.lang.Closure)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.codehaus.groovy.runtime.InvokerInvocationException: groovy.lang.MissingMethodException: No signature of method: vars.GitlabUtility.sh() is applicable for argument types: (LinkedHashMap) values: [[script:source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 && gitlab projects "{ per_page: '200' }" --only=name,id,http_url_to_repo | grep -i "Test Project" | sort | awk -F '|' '{ print $3 }' | xargs, ...]]
+Possible solutions: is(java.lang.Object), use([Ljava.lang.Object;), run(), run(), any(), with(groovy.lang.Closure)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:113)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at groovy.lang.Script.invokeMethod(Script.java:96)
+at ValidateGitlabUtility.testGetProjectID(ValidateGitlabUtility.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: groovy.lang.MissingMethodException: No signature of method: vars.GitlabUtility.sh() is applicable for argument types: (LinkedHashMap) values: [[script:source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 && gitlab projects "{ per_page: '200' }" --only=name,id,http_url_to_repo | grep -i "Test Project" | sort | awk -F '|' '{ print $3 }' | xargs, ...]]
+Possible solutions: is(java.lang.Object), use([Ljava.lang.Object;), run(), run(), any(), with(groovy.lang.Closure)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:70)
+at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:80)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at vars.GitlabUtility.getProjectID(GitlabUtility.groovy:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.codehaus.groovy.runtime.InvokerInvocationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProjectID -->
+        <test-method signature="testGetProjectIDByGroupName()[pri:1, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testGetProjectIDByGroupName" finished-at="2021-11-18T15:42:29 EST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProjectIDByGroupName -->
+        <test-method signature="testGetUserID()[pri:2, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testGetUserID" finished-at="2021-11-18T15:42:29 EST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserID -->
+        <test-method signature="testCreateBranch()[pri:4, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCreateBranch" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBranch -->
+        <test-method signature="testCreateMergeRequest()[pri:5, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCreateMergeRequest" finished-at="2021-11-18T15:42:29 EST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateMergeRequest -->
+        <test-method signature="testCheckMergeStatus()[pri:6, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCheckMergeStatus" finished-at="2021-11-18T15:42:29 EST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckMergeStatus -->
+        <test-method signature="testAcceptMergeRequest()[pri:7, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testAcceptMergeRequest" finished-at="2021-11-18T15:42:29 EST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAcceptMergeRequest -->
+        <test-method signature="testCheckIfBranchExists()[pri:8, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCheckIfBranchExists" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckIfBranchExists -->
+        <test-method signature="testDeleteBranch()[pri:9, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testDeleteBranch" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteBranch -->
+        <test-method signature="testMergeRequestHasNoChanges()[pri:10, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testMergeRequestHasNoChanges" finished-at="2021-11-18T15:42:29 EST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMergeRequestHasNoChanges -->
+        <test-method signature="testSetMergePermission()[pri:11, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testSetMergePermission" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetMergePermission -->
+        <test-method signature="testUnprotectBranch()[pri:12, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testUnprotectBranch" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnprotectBranch -->
+        <test-method signature="testHasMergeError()[pri:13, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testHasMergeError" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHasMergeError -->
+        <test-method signature="testCheckoutRepo()[pri:14, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCheckoutRepo" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckoutRepo -->
+        <test-method signature="testGetRepoSSHURL()[pri:15, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testGetRepoSSHURL" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRepoSSHURL -->
+        <test-method signature="testCheckinFileToGitWithRebase()[pri:16, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="testCheckinFileToGitWithRebase" finished-at="2021-11-18T15:42:29 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckinFileToGitWithRebase -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:ValidateGitlabUtility@cad498c]" started-at="2021-11-18T15:42:29 EST" name="afterTest" finished-at="2021-11-18T15:42:29 EST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- ValidateGitlabUtility -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
