@@ -22,6 +22,8 @@ pipeline {
 		stage ('Test') {
 		    steps {
 			    echo 'Running Test Pipeline'
+			    sh 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+			    echo 'Completing Build Pipeline'
 			}     
 		}
 
