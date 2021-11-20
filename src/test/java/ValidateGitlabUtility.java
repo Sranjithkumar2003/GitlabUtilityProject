@@ -7,6 +7,7 @@ import groovy.lang.GroovyShell;
 
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.codehaus.groovy.control.CompilationFailedException;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -52,12 +53,13 @@ public class ValidateGitlabUtility {
   
 	
 	@Test(priority = 0)
-	public void testGetProjectID() {
+	@Parameters({"inputProjectName", "outputProjectID"})
+	public void testGetProjectID(String inputProjectName, String outputProjectID ) {
 		System.out.println("Testing method getProjectID");
-		
-		Object result = groovyObj.invokeMethod("getProjectID", new Object[] { "Test Project" });
+		System.out.println("Project name : " + inputProjectName);
+		Object result = groovyObj.invokeMethod("getProjectID", new Object[] { inputProjectName });
 		//System.out.println(result);
-		Assert.assertEquals(result, "Test");
+		Assert.assertEquals(result, outputProjectID);
 	}
 	
 	@Test(priority = 1)
