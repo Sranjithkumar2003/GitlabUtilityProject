@@ -9,8 +9,8 @@ START: Global fields
 @groovy.transform.Field
 def SOURCE_COMMAND = "source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 &&"
 
-@groovy.transform.Field
-def systemCredentials = new SystemCredentials()
+//@groovy.transform.Field
+//def systemCredentials = new SystemCredentials()
 /**
 END: Global fields
 */
