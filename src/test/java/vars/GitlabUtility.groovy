@@ -7,10 +7,10 @@ package vars;
 START: Global fields
 */
 @groovy.transform.Field
-SOURCE_COMMAND = "source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 &&"
+def SOURCE_COMMAND = "source /Users/ranjith/.bash_profile_test > /dev/null 2>&1 &&"
 
 @groovy.transform.Field
-systemCredentials = new SystemCredentials()
+def systemCredentials = new SystemCredentials()
 /**
 END: Global fields
 */
