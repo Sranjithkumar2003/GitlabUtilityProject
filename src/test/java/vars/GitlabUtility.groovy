@@ -31,10 +31,12 @@ END: Global fields
 	*/
 	def getProjectID(String projectName) {
 
+		/*
 		if (projectName?.trim()) {
 			return sh(script: "${SOURCE_COMMAND} gitlab projects \"{ per_page: \'200\' }\" --only=name,id,http_url_to_repo | grep -i \"${projectName}\" | sort | awk -F \'|\' \'{ print \$3 }\' | xargs", returnStdout: true).trim()
 			//return sh(script: "ls -l")
 		}
+		*/
 		return "Test" //null
 	}
 

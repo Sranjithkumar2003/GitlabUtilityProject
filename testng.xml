@@ -3,7 +3,26 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="ValidateGitlabUtility"/>
+      <class name="ValidateGitlabUtility">
+		<methods>
+			<include name="testGetProjectID"></include>
+			<include name="testGetProjectIDByGroupName"></include>
+			<include name="testGetUserID"></include>
+			<include name="testCreateBranch"></include>
+			<include name="testCreateMergeRequest"></include>
+			<include name="testCheckMergeStatus"></include>
+			<include name="testAcceptMergeRequest"></include>
+			<include name="testCheckIfBranchExists"></include>
+			<include name="testDeleteBranch"></include>
+			<include name="testMergeRequestHasNoChanges"></include>
+			<include name="testSetMergePermission"></include>
+			<include name="testUnprotectBranch"></include>
+			<include name="testHasMergeError"></include>
+			<include name="testCheckoutRepo"></include>
+			<include name="testGetRepoSSHURL"></include>
+			<include name="testCheckinFileToGitWithRebase"></include>
+		</methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
